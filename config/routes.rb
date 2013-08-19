@@ -1,4 +1,6 @@
 Jinroh::Application.routes.draw do
+  get "game/new"
+
   resources :players
 
 
