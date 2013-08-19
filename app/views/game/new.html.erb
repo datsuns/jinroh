@@ -1,7 +1,12 @@
 <% if notice %>
-  <p id="notice"><%= notice %></p> <% end %>
+  <p id="notice"><%= notice %></p>
+  <% end %>
+
+<p><%= link_to 'プレイヤー登録', players_path %></p>
+
 <h1>Playerカ タ ロ グ</h1>
-<% @players.each do |player| %> <div class="entry">
-    <span class="price"><%= player.name %></span> </div>
-</div>
+<% @players.each do |player| %>
+  <div class="entry">
+    名前: <%= player.name %> : <%= player.status == 0 ? '死亡' : '生存' %>
+  </div>
 <% end %>
