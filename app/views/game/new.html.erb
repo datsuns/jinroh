@@ -1,2 +1,7 @@
-<h1>Game#new</h1>
-<p>Find me in app/views/game/new.html.erb</p>
+<% if notice %>
+  <p id="notice"><%= notice %></p> <% end %>
+<h1>Playerカ タ ロ グ</h1>
+<% @players.each do |player| %> <div class="entry">
+    <span class="price"><%= player.name %></span> </div>
+</div>
+<% end %>
